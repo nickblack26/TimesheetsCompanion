@@ -7,19 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01490D302A1888D400645346 /* TimesheetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490D2F2A1888D400645346 /* TimesheetModel.swift */; };
 		018CFFB22A18370F000A8BFA /* TimesheetsCompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018CFFB12A18370F000A8BFA /* TimesheetsCompanionApp.swift */; };
 		018CFFB42A18370F000A8BFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018CFFB32A18370F000A8BFA /* ContentView.swift */; };
 		018CFFB62A183711000A8BFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018CFFB52A183711000A8BFA /* Assets.xcassets */; };
-		018CFFB92A183711000A8BFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018CFFB82A183711000A8BFA /* Preview Assets.xcassets */; };
+		01998F8B2A193C0B00352D23 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F8A2A193C0B00352D23 /* HomeView.swift */; };
+		01998F8E2A193E3500352D23 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F8D2A193E3500352D23 /* ControlView.swift */; };
+		01998F902A1949E300352D23 /* SubControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F8F2A1949E300352D23 /* SubControlView.swift */; };
+		01998F922A194BB400352D23 /* TimeSheetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F912A194BB400352D23 /* TimeSheetItem.swift */; };
+		01998F942A1A6E2800352D23 /* JobcodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F932A1A6E2800352D23 /* JobcodeModel.swift */; };
+		01998F962A1A6FA000352D23 /* TSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F952A1A6FA000352D23 /* TSheetManager.swift */; };
+		01998F992A1AB0C500352D23 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F982A1AB0C500352D23 /* HomeViewModel.swift */; };
+		01998F9B2A1BC39800352D23 /* TimesheetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F9A2A1BC39800352D23 /* TimesheetDetail.swift */; };
+		01998F9D2A1BC6BF00352D23 /* JobcodesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F9C2A1BC6BF00352D23 /* JobcodesListView.swift */; };
+		01998F9F2A1BC6CD00352D23 /* JobcodesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F9E2A1BC6CD00352D23 /* JobcodesListViewModel.swift */; };
+		01998FA12A1BCB2700352D23 /* WorkingReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998FA02A1BCB2700352D23 /* WorkingReportView.swift */; };
+		01998FA32A1BCB3D00352D23 /* WorkingReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998FA22A1BCB3D00352D23 /* WorkingReportViewModel.swift */; };
+		01998FA52A1BCB8300352D23 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998FA42A1BCB8300352D23 /* UserModel.swift */; };
+		01998FA72A1BCF1200352D23 /* TimesheetsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998FA62A1BCF1200352D23 /* TimesheetsListViewModel.swift */; };
+		01998FA92A1BD13B00352D23 /* TimesheetsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998FA82A1BD13B00352D23 /* TimesheetsListView.swift */; };
+		019996162A2A7EB100077D06 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019996152A2A7EB100077D06 /* LoginView.swift */; };
+		01B7A4542A1DA0BE00F64390 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7A4532A1DA0BE00F64390 /* AppNavigation.swift */; };
+		01B7A4562A1DAE1E00F64390 /* JobcodeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7A4552A1DAE1E00F64390 /* JobcodeItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01490D2F2A1888D400645346 /* TimesheetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetModel.swift; sourceTree = "<group>"; };
 		018CFFAE2A18370F000A8BFA /* TimesheetsCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimesheetsCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018CFFB12A18370F000A8BFA /* TimesheetsCompanionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetsCompanionApp.swift; sourceTree = "<group>"; };
 		018CFFB32A18370F000A8BFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		018CFFB52A183711000A8BFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		018CFFB82A183711000A8BFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		018CFFBA2A183711000A8BFA /* TimesheetsCompanion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimesheetsCompanion.entitlements; sourceTree = "<group>"; };
+		01998F8A2A193C0B00352D23 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		01998F8D2A193E3500352D23 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		01998F8F2A1949E300352D23 /* SubControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubControlView.swift; sourceTree = "<group>"; };
+		01998F912A194BB400352D23 /* TimeSheetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSheetItem.swift; sourceTree = "<group>"; };
+		01998F932A1A6E2800352D23 /* JobcodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobcodeModel.swift; sourceTree = "<group>"; };
+		01998F952A1A6FA000352D23 /* TSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSheetManager.swift; sourceTree = "<group>"; };
+		01998F982A1AB0C500352D23 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		01998F9A2A1BC39800352D23 /* TimesheetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetDetail.swift; sourceTree = "<group>"; };
+		01998F9C2A1BC6BF00352D23 /* JobcodesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobcodesListView.swift; sourceTree = "<group>"; };
+		01998F9E2A1BC6CD00352D23 /* JobcodesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobcodesListViewModel.swift; sourceTree = "<group>"; };
+		01998FA02A1BCB2700352D23 /* WorkingReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingReportView.swift; sourceTree = "<group>"; };
+		01998FA22A1BCB3D00352D23 /* WorkingReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingReportViewModel.swift; sourceTree = "<group>"; };
+		01998FA42A1BCB8300352D23 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		01998FA62A1BCF1200352D23 /* TimesheetsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetsListViewModel.swift; sourceTree = "<group>"; };
+		01998FA82A1BD13B00352D23 /* TimesheetsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetsListView.swift; sourceTree = "<group>"; };
+		019996152A2A7EB100077D06 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		01B7A4532A1DA0BE00F64390 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
+		01B7A4552A1DAE1E00F64390 /* JobcodeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobcodeItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +69,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01490D2E2A18888900645346 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01490D2F2A1888D400645346 /* TimesheetModel.swift */,
+				01998F932A1A6E2800352D23 /* JobcodeModel.swift */,
+				01998FA42A1BCB8300352D23 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		018CFFA52A18370F000A8BFA = {
 			isa = PBXGroup;
 			children = (
@@ -52,21 +98,45 @@
 		018CFFB02A18370F000A8BFA /* TimesheetsCompanion */ = {
 			isa = PBXGroup;
 			children = (
+				01998F972A1AB0B300352D23 /* ViewModels */,
+				01998F8C2A193E2A00352D23 /* Views */,
+				01490D2E2A18888900645346 /* Model */,
 				018CFFB12A18370F000A8BFA /* TimesheetsCompanionApp.swift */,
 				018CFFB32A18370F000A8BFA /* ContentView.swift */,
 				018CFFB52A183711000A8BFA /* Assets.xcassets */,
 				018CFFBA2A183711000A8BFA /* TimesheetsCompanion.entitlements */,
-				018CFFB72A183711000A8BFA /* Preview Content */,
+				01998F952A1A6FA000352D23 /* TSheetManager.swift */,
 			);
 			path = TimesheetsCompanion;
 			sourceTree = "<group>";
 		};
-		018CFFB72A183711000A8BFA /* Preview Content */ = {
+		01998F8C2A193E2A00352D23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				018CFFB82A183711000A8BFA /* Preview Assets.xcassets */,
+				01998F8A2A193C0B00352D23 /* HomeView.swift */,
+				01998F8D2A193E3500352D23 /* ControlView.swift */,
+				01998F8F2A1949E300352D23 /* SubControlView.swift */,
+				01998F912A194BB400352D23 /* TimeSheetItem.swift */,
+				01998F9A2A1BC39800352D23 /* TimesheetDetail.swift */,
+				01998F9C2A1BC6BF00352D23 /* JobcodesListView.swift */,
+				01998FA02A1BCB2700352D23 /* WorkingReportView.swift */,
+				01998FA82A1BD13B00352D23 /* TimesheetsListView.swift */,
+				01B7A4552A1DAE1E00F64390 /* JobcodeItem.swift */,
+				019996152A2A7EB100077D06 /* LoginView.swift */,
 			);
-			path = "Preview Content";
+			path = Views;
+			sourceTree = "<group>";
+		};
+		01998F972A1AB0B300352D23 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				01998F982A1AB0C500352D23 /* HomeViewModel.swift */,
+				01998F9E2A1BC6CD00352D23 /* JobcodesListViewModel.swift */,
+				01998FA22A1BCB3D00352D23 /* WorkingReportViewModel.swift */,
+				01998FA62A1BCF1200352D23 /* TimesheetsListViewModel.swift */,
+				01B7A4532A1DA0BE00F64390 /* AppNavigation.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +155,8 @@
 			dependencies = (
 			);
 			name = TimesheetsCompanion;
+			packageProductDependencies = (
+			);
 			productName = TimesheetsCompanion;
 			productReference = 018CFFAE2A18370F000A8BFA /* TimesheetsCompanion.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +185,8 @@
 				Base,
 			);
 			mainGroup = 018CFFA52A18370F000A8BFA;
+			packageReferences = (
+			);
 			productRefGroup = 018CFFAF2A18370F000A8BFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +201,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				018CFFB92A183711000A8BFA /* Preview Assets.xcassets in Resources */,
 				018CFFB62A183711000A8BFA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +212,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01998FA32A1BCB3D00352D23 /* WorkingReportViewModel.swift in Sources */,
+				01998F902A1949E300352D23 /* SubControlView.swift in Sources */,
+				01998F992A1AB0C500352D23 /* HomeViewModel.swift in Sources */,
+				01490D302A1888D400645346 /* TimesheetModel.swift in Sources */,
+				01998F8B2A193C0B00352D23 /* HomeView.swift in Sources */,
+				01998FA72A1BCF1200352D23 /* TimesheetsListViewModel.swift in Sources */,
+				01B7A4562A1DAE1E00F64390 /* JobcodeItem.swift in Sources */,
+				01B7A4542A1DA0BE00F64390 /* AppNavigation.swift in Sources */,
+				01998FA92A1BD13B00352D23 /* TimesheetsListView.swift in Sources */,
 				018CFFB42A18370F000A8BFA /* ContentView.swift in Sources */,
+				01998F922A194BB400352D23 /* TimeSheetItem.swift in Sources */,
+				01998FA52A1BCB8300352D23 /* UserModel.swift in Sources */,
+				01998F9D2A1BC6BF00352D23 /* JobcodesListView.swift in Sources */,
+				01998F9B2A1BC39800352D23 /* TimesheetDetail.swift in Sources */,
+				01998F9F2A1BC6CD00352D23 /* JobcodesListViewModel.swift in Sources */,
+				019996162A2A7EB100077D06 /* LoginView.swift in Sources */,
+				01998F962A1A6FA000352D23 /* TSheetManager.swift in Sources */,
+				01998FA12A1BCB2700352D23 /* WorkingReportView.swift in Sources */,
+				01998F942A1A6E2800352D23 /* JobcodeModel.swift in Sources */,
+				01998F8E2A193E3500352D23 /* ControlView.swift in Sources */,
 				018CFFB22A18370F000A8BFA /* TimesheetsCompanionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,11 +361,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TimesheetsCompanion/Preview Content\"";
 				DEVELOPMENT_TEAM = PK8WVYF36Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -296,11 +388,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TimesheetsCompanion/Preview Content\"";
 				DEVELOPMENT_TEAM = PK8WVYF36Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
