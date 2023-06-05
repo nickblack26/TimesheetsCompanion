@@ -66,9 +66,7 @@ struct HomeView: View {
 					GridRow {
 						Button {
 							if manager.on_the_clock {
-								Task {
-									await manager.clockOut()
-								}
+								manager.clockOut()
 							} else {
 								manager.clockIn()
 							}
@@ -81,10 +79,7 @@ struct HomeView: View {
 					GridRow {
 						Button {
 							if manager.on_break {
-								Task {
-									await manager.clockOut()
-									
-								}
+								manager.clockOut()
 							} else {
 								manager.startBreak()
 							}
