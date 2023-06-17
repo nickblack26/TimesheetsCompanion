@@ -44,14 +44,11 @@ enum Method: String {
 
 @MainActor
 class TSheetManager: ObservableObject {
-	static var shared = TSheetManager()
 	@Published var currentJob: JobcodeModel? {
 		didSet {
+			// when setting a current job, create a new timesheet entry only if the current timesheet's job doesn't equal the current job
 			if (currentTimesheet != nil && currentJob!.id != currentTimesheet!.jobcode_id) {
-				clockOut()
-				print("clocked out")
 				Task {
-					print("creating timesheet with jobcode: \(currentJob!.id)")
 					try await createTimesheet(jobcode_id: currentJob!.id)
 				}
 			}
@@ -98,6 +95,7 @@ class TSheetManager: ObservableObject {
 		if let index = self.timesheets.firstIndex(where: { timesheet in
 			timesheet.on_the_clock == true
 		}) {
+			stopTimer()
 			// set current index for easier saving in the future
 			self.currentTimesheetIndex = index
 			
@@ -209,7 +207,7 @@ class TSheetManager: ObservableObject {
 		]
 		
 		
-		try await makeRequest(endpoint: .authorize, queryItems: queryItems)
+		let _ = try await makeRequest(endpoint: .authorize, queryItems: queryItems)
 		//		guard let url = createURL(endpoint: .authorize, queryItems: queryItems) else { return }
 		
 		
@@ -242,6 +240,10 @@ class TSheetManager: ObservableObject {
 	}
 	
 	func createTimesheet(jobcode_id: Int, current: Bool = true, end: Date? = nil) async throws -> ServerResponse? {
+		if currentTimesheet != nil {
+			clockOut()
+		}
+		
 		let timesheet = TimesheetModel(user_id: 3514010, jobcode_id: jobcode_id, end: end, type: "regular", on_the_clock: current, created_by_user_id: 3514010)
 		
 		if(current) {
@@ -326,7 +328,6 @@ class TSheetManager: ObservableObject {
 			clockOut()
 		}
 		Task {
-			
 			try await self.createTimesheet(jobcode_id: 54395340)
 		}
 	}

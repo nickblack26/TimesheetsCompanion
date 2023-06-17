@@ -10,16 +10,16 @@ import Foundation
 @MainActor
 class JobcodesListViewModel: ObservableObject {
     @Published var jobcodes: [JobcodeModel] = []
-    let manager = TSheetManager()
+//    let manager = TSheetManager()
     
     init() {        
-        Task {
-            let response = try await manager.fetchAllJobcodes()
-            self.jobcodes = response?.results.jobcodes?.map { $1 } ?? []
-        }
+//        Task {
+//            let response = try await manager.fetchAllJobcodes()
+//            self.jobcodes = response?.results.jobcodes?.map { $1 } ?? []
+//        }
     }
 	
 	func setJobcode(jobcode: JobcodeModel) {
-		manager.currentJob = jobcode
+//		manager.currentJob = jobcode
 	}
 }

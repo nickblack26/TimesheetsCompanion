@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-	//    @StateObject var vm = HomeViewModel()
 	@EnvironmentObject var navigation: AppNavigation
 	@EnvironmentObject var manager: TSheetManager
 	
