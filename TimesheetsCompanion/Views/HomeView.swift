@@ -121,5 +121,12 @@ struct HomeView: View {
 				}
 			}
 		}
+		.task {
+			do {
+				try await manager.fetchTodaysTimesheets()
+			} catch {
+				print("Error")
+			}
+		}
 	}
 }
