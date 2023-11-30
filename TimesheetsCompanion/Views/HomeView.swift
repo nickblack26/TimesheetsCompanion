@@ -1,56 +1,40 @@
-//
-//  ControlCentre.swift
-//  TimesheetsCompanion
-//
-//  Created by Nick on 5/20/23.
-//
-
 import SwiftUI
 
 struct HomeView: View {
-	@EnvironmentObject var navigation: AppNavigation
-	@EnvironmentObject var manager: TSheetManager
+	// MARK: Environment Variables
+	@Environment(AppNavigation.self) private var navigation
+	@Environment(SupabaseManager.self) private var supabase
 	
-	private func convertDateFormatter(date: Date) -> String {
-		let dateFormatter = DateFormatter()
-		
-		dateFormatter.dateFormat = "h:mma"///this is what you want to convert format
-		dateFormatter.amSymbol = "am"
-		dateFormatter.pmSymbol = "pm"
-		let timeStamp = dateFormatter.string(from: date)
-		
-		return timeStamp
-	}
-	
-	private func getDiffTime(seconds: Int) -> String {
-		let hours = seconds / 3600
-		let minutes = (seconds % 3600) / 60
-		let seconds = seconds % 60
-		return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
-	}
+	// MARK: State Variables
+	@State private var timeEntries: [TimeEntryModel] = []
+	@State private var timeFormatter = ElapsedTimeFormatter()
+	@State private var activity: String = ""
+	@FocusState private var focused: Bool
 	
 	var body: some View {
 		Grid(horizontalSpacing: 10, verticalSpacing: 10) {
 			GridRow(alignment: .top) {
 				VStack(spacing: 10) {
 					Button {
-						navigation.navigate(tab: .jobcodes)
+						withAnimation {
+							navigation.navigate(tab: .clients)
+						}
 					} label: {
-						ControlView(icon: "clock.circle.fill", title: "Time Clock", subTitle: manager.currentJob?.name)
+						ControlView(icon: "building.2.crop.circle.fill", title: supabase.currentClient == nil ? "Clients" : "Client", subTitle: supabase.currentClient?.name)
 					}
 					.buttonStyle(.plain)
 					
 					Button {
 						navigation.navigate(tab: .working)
 					} label: {
-						ControlView(icon: "person.circle.fill", title: "Who's Working", subTitle: nil)
+						ControlView(icon: "doc.circle.fill", title: "Projects", subTitle: supabase.currentTimeEntry?.project?.name)
 					}
 					.buttonStyle(.plain)
 					
 					Button {
 						navigation.navigate(tab: .timesheets)
 					} label: {
-						ControlView(icon: "list.bullet.circle.fill", title: "Time Entries", subTitle: nil)
+						ControlView(icon: "calendar.circle.fill", title: "Time Entries", subTitle: nil)
 					}
 					.buttonStyle(.plain)
 				}
@@ -64,26 +48,22 @@ struct HomeView: View {
 				Grid(verticalSpacing: 10) {
 					GridRow {
 						Button {
-							if manager.on_the_clock {
-								manager.clockOut()
+							if supabase.trackingHours {
+								supabase.clockOut()
 							} else {
-								manager.clockIn()
+								supabase.clockIn()
 							}
 						} label: {
-							SubControlView(icon: manager.on_the_clock ? "pause.circle.fill" : "play.circle.fill", foregroundColor: manager.on_the_clock ? .red : nil, title: manager.on_the_clock ? "Current" : "Clock in", subtitle: manager.on_the_clock ? getDiffTime(seconds: manager.duration) : nil)
+							SubControlView(icon: supabase.trackingHours ? "pause.circle.fill" : "play.circle.fill", foregroundColor: supabase.trackingHours ? .red : nil, title: supabase.trackingHours ? "Current" : "Clock in", subtitle: supabase.trackingHours ? supabase.duration : nil)
 						}
 						.buttonStyle(.plain)
 					}
 					
 					GridRow {
 						Button {
-							if manager.on_break {
-								manager.clockOut()
-							} else {
-								manager.startBreak()
-							}
+
 						} label: {
-							SubControlView(icon: "person.crop.circle.badge.clock.fill", foregroundColor: .orange, title: manager.on_break ? "On Break" : "Take Break", subtitle: manager.on_break ? getDiffTime(seconds: manager.duration) : nil)
+							SubControlView(icon: "person.crop.circle.badge.clock.fill", foregroundColor: .orange, title: supabase.trackingHours ? "On Break" : "Take Break", subtitle: supabase.trackingHours ? supabase.duration : nil)
 						}
 						.buttonStyle(.plain)
 					}
@@ -92,21 +72,56 @@ struct HomeView: View {
 				
 			}
 			
-			if !$manager.timesheets.isEmpty {
+			if let currentTimeEntry = supabase.currentTimeEntry {
+				GridRow(alignment: .top) {
+					Grid(alignment: .topLeading, verticalSpacing: 10) {
+						Text("Activity")
+							.fontWeight(.bold)
+						
+						Divider()
+						
+						Form {
+							TextField("Activity", text: $activity, prompt: Text("Hello"), axis: .vertical)
+								.textFieldStyle(.plain)
+								.labelsHidden()
+								.defaultFocus($focused, false)
+								.onKeyPress(.return, action: {
+									focused = false
+									if(currentTimeEntry.activity != activity) {
+										Task {
+											await supabase.updateTimeEntry(
+												id: currentTimeEntry.id,
+												.init(id: nil, user: nil, start_time: nil, end_time: nil, project: nil, client: nil, activity: activity))
+										}
+									}
+									return .handled
+								})
+								.focused($focused)
+						}
+					}
+				}
+				.padding(.vertical, 5)
+				.padding(.horizontal, 10)
+				.background {
+					RoundedRectangle(cornerRadius: 10, style: .continuous)
+						.fill(.thinMaterial)
+						.shadow(radius: 1)
+				}
+				.gridCellColumns(2)
+			}
+			
+			if !timeEntries.isEmpty {
 				GridRow(alignment: .top) {
 					Grid(alignment: .topLeading, verticalSpacing: 10) {
 						Text("Time Entries")
 							.fontWeight(.bold)
 						
 						VStack(spacing: 5) {
-							ForEach($manager.timesheets) { $timesheet in
-								if let jobcode = manager.jobcodes.first(where: {$0.id == timesheet.jobcode_id }) {
-									Button {
-										navigation.navigate(tab: .timesheetEdit, timesheet: timesheet)
-									} label: {
-										TimeSheetItem(client: jobcode.name, startDate: timesheet.start, endDate: timesheet.end, duration: timesheet.duration, type: jobcode.type)
-									}
-									.buttonStyle(.plain)
+							ForEach(timeEntries) { entry in
+								Button {
+									navigation.navigate(tab: .timesheetDetail(timeEntry: entry))
+								} label: {
+									TimeEntryItem(client: entry.client?.name, startDate: entry.start_time, endDate: entry.end_time, duration: 0, type: "", activity: entry.activity)
 								}
 							}
 						}
@@ -121,12 +136,43 @@ struct HomeView: View {
 				}
 			}
 		}
+		.onAppear {
+			supabase.requestAuthorization()
+		}
 		.task {
+			let localISOFormatter = ISO8601DateFormatter()
+			localISOFormatter.timeZone = TimeZone.current
+			let date = Date() // current date or replace with a specific date
+			let calendar = Calendar.current
+			let startTime = calendar.startOfDay(for: date)
+			let endTime = calendar.date(bySettingHour: 23, minute: 59, second: 59, of: date) ?? Date()
+			
+			let query = supabase.client.database
+				.from("time_entries")
+				.select()
+				.lt(column: "end_date",  value: endTime.ISO8601Format())
+				.gt(column: "start_date",  value: startTime.ISO8601Format())
+			
+			print(startTime.formatted(.iso8601.dateTimeSeparator(.space).timeZoneSeparator(.omitted)))
+			print(localISOFormatter.string(from: date))
+			
+			
 			do {
-				try await manager.fetchTodaysTimesheets()
+				timeEntries = try await query.execute().value
 			} catch {
-				print("Error")
+				timeEntries = []
+				print("### Select Error: \(error)")
 			}
 		}
+		.padding(10)
 	}
+}
+
+
+#Preview {
+	HomeView()
+		.environment(previewSupabaseManager)
+		.environment(previewNavigationManager)
+		.previewLayout(.sizeThatFits)
+	
 }

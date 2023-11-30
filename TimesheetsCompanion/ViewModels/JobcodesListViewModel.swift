@@ -9,7 +9,7 @@ import Foundation
 
 @MainActor
 class JobcodesListViewModel: ObservableObject {
-    @Published var jobcodes: [JobcodeModel] = []
+//    @Published var jobcodes: [JobcodeModel] = []
 //    let manager = TSheetManager()
     
     init() {        
@@ -19,7 +19,7 @@ class JobcodesListViewModel: ObservableObject {
 //        }
     }
 	
-	func setJobcode(jobcode: JobcodeModel) {
+//	func setJobcode(jobcode: JobcodeModel) {
 //		manager.currentJob = jobcode
-	}
+//	}
 }

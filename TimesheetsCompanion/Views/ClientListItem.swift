@@ -7,36 +7,39 @@
 
 import SwiftUI
 
-struct JobcodeItem: View {
+struct ClientListItem: View {
     @State private var hovering: Bool = false
-    var jobcode: JobcodeModel
-	var currentJob: JobcodeModel
+    var client: ClientModel
+	var currentClient: ClientModel?
     
     var body: some View {
-        ZStack(alignment: .trailing) {
+		let isCurrentClient = (currentClient != nil) && currentClient?.id == client.id
+       
+		ZStack(alignment: .trailing) {
             if hovering {
                 RoundedRectangle(cornerRadius: 5, style: .continuous)
                     .fill(.primary.opacity(0.05))
                     .frame(maxWidth: .infinity)
-                    
             }
-			if currentJob.id == jobcode.id {
-				RoundedRectangle(cornerRadius: 5, style: .continuous)
-					.fill(.green)
-					.frame(maxWidth: .infinity)
-			}
+			
             HStack {
                 Image(systemName: "building.2.crop.circle.fill")
                     .font(.largeTitle)
-                    .foregroundColor(.green)
+					.foregroundColor(isCurrentClient ? .green : .secondary)
                 
-				Text(jobcode.name)
+				Text(client.name)
                 
                 Spacer()
             }
+			.padding(.horizontal, 5)
+			.padding(.vertical, 2.5)
         }
         .onHover { hover in
             self.hovering = hover
         }
     }
+}
+
+#Preview {
+	ClientListItem(client: .init(id: UUID(), name: "Test"), currentClient: .init(id: UUID(), name: "Test"))
 }

@@ -34,8 +34,8 @@ struct ReportModel: Codable, Identifiable {
 class WorkingReportViewModel: ObservableObject {
     @Published var currentWorkers: [ReportModel] = []
     @Published var users: [UserModel] = []
-    @Published var timesheets: [TimesheetModel] = []
-    @Published var jobcodes: [JobcodeModel] = []
+//    @Published var timesheets: [TimesheetModel] = []
+//    @Published var jobcodes: [JobcodeModel] = []
 //    private let manager = TSheetManager.shared
     
     init() {

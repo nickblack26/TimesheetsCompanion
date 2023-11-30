@@ -6,33 +6,81 @@
 //
 
 import SwiftUI
+import AuthenticationServices
+@_spi(Experimental) import GoTrue
 
 struct LoginView: View {
-	@EnvironmentObject var manager: TSheetManager
-	@State private var clientId: String = ""
-	@State private var redirectUri: String = ""
+	@Environment(\.dismissWindow) private var dismissWindow
+	@Environment(SupabaseManager.self) private var supabase
+	
+	@State private var email: String = "nicholas.black98@icloud.com"
+	@State private var password: String = "Bl@ck98!"
 	
     var body: some View {
-		Form {
-			TextField("Client ID", text: $clientId)
-				
-			TextField("Redirect URI", text: $redirectUri)
-			
-//		https://deepspacerobots.com
-//			09bcce4f97c4452ff25def1e05cf2e43
-			
-			Button("Save") {
+		VStack(alignment: .leading, content: {
+			SignInWithAppleButton { request in
+				request.requestedScopes = [.email, .fullName]
+			} onCompletion: { result in
 				Task {
-					try await manager.authorizationRequest(client_id: clientId, redirect_uri: redirectUri)
+					do {
+						guard let credential = try result.get().credential as? ASAuthorizationAppleIDCredential
+						else {
+							return
+						}
+						
+						guard let idToken = credential.identityToken
+							.flatMap({ String(data: $0, encoding: .utf8) })
+						else {
+							return
+						}
+						try await supabase.client.auth.signInWithIdToken(
+							credentials: .init(
+								provider: .apple,
+								idToken: idToken
+							)
+						)
+					} catch {
+						dump(error)
+					}
 				}
 			}
-			.disabled(clientId.isEmpty || redirectUri.isEmpty)
-		}
+			.fixedSize()
+			
+			HStack {
+				VStack {
+					Divider()
+				}
+				
+				Text("Or")
+				
+				VStack {
+					Divider()
+				}
+			}
+			
+			Form {
+				TextField("Email", text: $email)
+					.labelsHidden()
+				
+				TextField("Password", text: $password)
+					.labelsHidden()
+				
+				Button("Save") {
+					supabase.signIn(email: email, password: password)
+					dismissWindow(id: "loginView")
+				}
+				.disabled(email.isEmpty || password.isEmpty)
+			}
+			.formStyle(.grouped)
+		})
+		
+		
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
+let previewSupabaseManager = SupabaseManager()
+
+#Preview {
+	LoginView()
+		.environment(previewSupabaseManager)
 }

@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct WorkingReportView: View {
-    @StateObject var vm = WorkingReportViewModel()
-    @EnvironmentObject var navigation: AppNavigation
+	@Environment(AppNavigation.self) private var navigation
     var tabDestination: Tab = .home
     
     var body: some View {
@@ -30,12 +29,12 @@ struct WorkingReportView: View {
             
             GridRow(alignment: .top) {
                 VStack(spacing: 5) {
-                    ForEach(vm.currentWorkers) { worker in
-                        if let user = vm.users.first(where: {$0.id == worker.user_id }) {
-                            Text(user.display_name)
-                        }
-                    }
-                    .frame(maxWidth: .infinity)
+//                    ForEach(vm.currentWorkers) { worker in
+//                        if let user = vm.users.first(where: {$0.id == worker.user_id }) {
+//                            Text(user.display_name)
+//                        }
+//                    }
+//                    .frame(maxWidth: .infinity)
                 }
             }
         }

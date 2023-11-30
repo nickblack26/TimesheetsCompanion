@@ -7,32 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01490D302A1888D400645346 /* TimesheetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01490D2F2A1888D400645346 /* TimesheetModel.swift */; };
+		010AF87C2ACF487200A8785A /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010AF87B2ACF487200A8785A /* ProjectModel.swift */; };
+		010AF87E2ACF6BCA00A8785A /* SignInWithAppleButtonViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010AF87D2ACF6BCA00A8785A /* SignInWithAppleButtonViewRepresentable.swift */; };
+		0142B6152ACB6B43006C27D1 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0142B6142ACB6B43006C27D1 /* Card.swift */; };
+		0142B6172ACB86A7006C27D1 /* BusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0142B6162ACB86A7006C27D1 /* BusinessModel.swift */; };
+		0142B61A2ACEFBCD006C27D1 /* DateBinding+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0142B6192ACEFBCD006C27D1 /* DateBinding+Extension.swift */; };
+		014ECC742AC7B65600699BA7 /* TimeEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014ECC732AC7B65600699BA7 /* TimeEntryModel.swift */; };
+		014ECC772AC7C4FA00699BA7 /* ClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014ECC762AC7C4FA00699BA7 /* ClientModel.swift */; };
+		014ECC7B2ACB03EE00699BA7 /* ElapsedTimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014ECC7A2ACB03EE00699BA7 /* ElapsedTimeFormatter.swift */; };
+		014ECC7E2ACB3E2A00699BA7 /* FluidMenuBarExtra in Frameworks */ = {isa = PBXBuildFile; productRef = 014ECC7D2ACB3E2A00699BA7 /* FluidMenuBarExtra */; };
 		018CFFB22A18370F000A8BFA /* TimesheetsCompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018CFFB12A18370F000A8BFA /* TimesheetsCompanionApp.swift */; };
 		018CFFB42A18370F000A8BFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018CFFB32A18370F000A8BFA /* ContentView.swift */; };
 		018CFFB62A183711000A8BFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 018CFFB52A183711000A8BFA /* Assets.xcassets */; };
 		01998F8B2A193C0B00352D23 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F8A2A193C0B00352D23 /* HomeView.swift */; };
 		01998F8E2A193E3500352D23 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F8D2A193E3500352D23 /* ControlView.swift */; };
 		01998F902A1949E300352D23 /* SubControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F8F2A1949E300352D23 /* SubControlView.swift */; };
-		01998F922A194BB400352D23 /* TimeSheetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F912A194BB400352D23 /* TimeSheetItem.swift */; };
-		01998F942A1A6E2800352D23 /* JobcodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F932A1A6E2800352D23 /* JobcodeModel.swift */; };
-		01998F962A1A6FA000352D23 /* TSheetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F952A1A6FA000352D23 /* TSheetManager.swift */; };
-		01998F992A1AB0C500352D23 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F982A1AB0C500352D23 /* HomeViewModel.swift */; };
+		01998F922A194BB400352D23 /* TimeEntryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F912A194BB400352D23 /* TimeEntryItem.swift */; };
 		01998F9B2A1BC39800352D23 /* TimesheetDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F9A2A1BC39800352D23 /* TimesheetDetail.swift */; };
-		01998F9D2A1BC6BF00352D23 /* JobcodesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F9C2A1BC6BF00352D23 /* JobcodesListView.swift */; };
-		01998F9F2A1BC6CD00352D23 /* JobcodesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F9E2A1BC6CD00352D23 /* JobcodesListViewModel.swift */; };
+		01998F9D2A1BC6BF00352D23 /* ClientsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998F9C2A1BC6BF00352D23 /* ClientsListView.swift */; };
 		01998FA12A1BCB2700352D23 /* WorkingReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998FA02A1BCB2700352D23 /* WorkingReportView.swift */; };
-		01998FA32A1BCB3D00352D23 /* WorkingReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998FA22A1BCB3D00352D23 /* WorkingReportViewModel.swift */; };
 		01998FA52A1BCB8300352D23 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998FA42A1BCB8300352D23 /* UserModel.swift */; };
-		01998FA72A1BCF1200352D23 /* TimesheetsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998FA62A1BCF1200352D23 /* TimesheetsListViewModel.swift */; };
-		01998FA92A1BD13B00352D23 /* TimesheetsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998FA82A1BD13B00352D23 /* TimesheetsListView.swift */; };
+		01998FA92A1BD13B00352D23 /* TimeEntriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01998FA82A1BD13B00352D23 /* TimeEntriesListView.swift */; };
 		019996162A2A7EB100077D06 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019996152A2A7EB100077D06 /* LoginView.swift */; };
+		01B28BB62AC7A6FB00B5B0B7 /* SupabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B28BB52AC7A6FB00B5B0B7 /* SupabaseManager.swift */; };
+		01B28BB92AC7A75C00B5B0B7 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 01B28BB82AC7A75C00B5B0B7 /* Supabase */; };
 		01B7A4542A1DA0BE00F64390 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7A4532A1DA0BE00F64390 /* AppNavigation.swift */; };
-		01B7A4562A1DAE1E00F64390 /* JobcodeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7A4552A1DAE1E00F64390 /* JobcodeItem.swift */; };
+		01B7A4562A1DAE1E00F64390 /* ClientListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B7A4552A1DAE1E00F64390 /* ClientListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01490D2F2A1888D400645346 /* TimesheetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetModel.swift; sourceTree = "<group>"; };
+		010AF87B2ACF487200A8785A /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		010AF87D2ACF6BCA00A8785A /* SignInWithAppleButtonViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButtonViewRepresentable.swift; sourceTree = "<group>"; };
+		0142B6142ACB6B43006C27D1 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		0142B6162ACB86A7006C27D1 /* BusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessModel.swift; sourceTree = "<group>"; };
+		0142B6192ACEFBCD006C27D1 /* DateBinding+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateBinding+Extension.swift"; sourceTree = "<group>"; };
+		014ECC732AC7B65600699BA7 /* TimeEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntryModel.swift; sourceTree = "<group>"; };
+		014ECC762AC7C4FA00699BA7 /* ClientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModel.swift; sourceTree = "<group>"; };
+		014ECC7A2ACB03EE00699BA7 /* ElapsedTimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeFormatter.swift; sourceTree = "<group>"; };
 		018CFFAE2A18370F000A8BFA /* TimesheetsCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimesheetsCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		018CFFB12A18370F000A8BFA /* TimesheetsCompanionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetsCompanionApp.swift; sourceTree = "<group>"; };
 		018CFFB32A18370F000A8BFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,21 +52,16 @@
 		01998F8A2A193C0B00352D23 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		01998F8D2A193E3500352D23 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		01998F8F2A1949E300352D23 /* SubControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubControlView.swift; sourceTree = "<group>"; };
-		01998F912A194BB400352D23 /* TimeSheetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSheetItem.swift; sourceTree = "<group>"; };
-		01998F932A1A6E2800352D23 /* JobcodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobcodeModel.swift; sourceTree = "<group>"; };
-		01998F952A1A6FA000352D23 /* TSheetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSheetManager.swift; sourceTree = "<group>"; };
-		01998F982A1AB0C500352D23 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		01998F912A194BB400352D23 /* TimeEntryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntryItem.swift; sourceTree = "<group>"; };
 		01998F9A2A1BC39800352D23 /* TimesheetDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetDetail.swift; sourceTree = "<group>"; };
-		01998F9C2A1BC6BF00352D23 /* JobcodesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobcodesListView.swift; sourceTree = "<group>"; };
-		01998F9E2A1BC6CD00352D23 /* JobcodesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobcodesListViewModel.swift; sourceTree = "<group>"; };
+		01998F9C2A1BC6BF00352D23 /* ClientsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsListView.swift; sourceTree = "<group>"; };
 		01998FA02A1BCB2700352D23 /* WorkingReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingReportView.swift; sourceTree = "<group>"; };
-		01998FA22A1BCB3D00352D23 /* WorkingReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingReportViewModel.swift; sourceTree = "<group>"; };
 		01998FA42A1BCB8300352D23 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		01998FA62A1BCF1200352D23 /* TimesheetsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetsListViewModel.swift; sourceTree = "<group>"; };
-		01998FA82A1BD13B00352D23 /* TimesheetsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimesheetsListView.swift; sourceTree = "<group>"; };
+		01998FA82A1BD13B00352D23 /* TimeEntriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntriesListView.swift; sourceTree = "<group>"; };
 		019996152A2A7EB100077D06 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		01B28BB52AC7A6FB00B5B0B7 /* SupabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseManager.swift; sourceTree = "<group>"; };
 		01B7A4532A1DA0BE00F64390 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
-		01B7A4552A1DAE1E00F64390 /* JobcodeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobcodeItem.swift; sourceTree = "<group>"; };
+		01B7A4552A1DAE1E00F64390 /* ClientListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,20 +69,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B28BB92AC7A75C00B5B0B7 /* Supabase in Frameworks */,
+				014ECC7E2ACB3E2A00699BA7 /* FluidMenuBarExtra in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01490D2E2A18888900645346 /* Model */ = {
+		0142B6182ACEFBB3006C27D1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				01490D2F2A1888D400645346 /* TimesheetModel.swift */,
-				01998F932A1A6E2800352D23 /* JobcodeModel.swift */,
-				01998FA42A1BCB8300352D23 /* UserModel.swift */,
+				0142B6192ACEFBCD006C27D1 /* DateBinding+Extension.swift */,
 			);
-			path = Model;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		01490D2E2A18888900645346 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01998FA42A1BCB8300352D23 /* UserModel.swift */,
+				014ECC732AC7B65600699BA7 /* TimeEntryModel.swift */,
+				014ECC762AC7C4FA00699BA7 /* ClientModel.swift */,
+				0142B6162ACB86A7006C27D1 /* BusinessModel.swift */,
+				010AF87B2ACF487200A8785A /* ProjectModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		014ECC782AC7CBFD00699BA7 /* TimeEntryViews */ = {
+			isa = PBXGroup;
+			children = (
+				01998FA82A1BD13B00352D23 /* TimeEntriesListView.swift */,
+				01998F912A194BB400352D23 /* TimeEntryItem.swift */,
+				01998F9A2A1BC39800352D23 /* TimesheetDetail.swift */,
+			);
+			path = TimeEntryViews;
+			sourceTree = "<group>";
+		};
+		014ECC792ACB03D500699BA7 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				014ECC7A2ACB03EE00699BA7 /* ElapsedTimeFormatter.swift */,
+			);
+			path = Formatters;
 			sourceTree = "<group>";
 		};
 		018CFFA52A18370F000A8BFA = {
@@ -98,14 +134,16 @@
 		018CFFB02A18370F000A8BFA /* TimesheetsCompanion */ = {
 			isa = PBXGroup;
 			children = (
-				01998F972A1AB0B300352D23 /* ViewModels */,
+				0142B6182ACEFBB3006C27D1 /* Extensions */,
+				014ECC792ACB03D500699BA7 /* Formatters */,
 				01998F8C2A193E2A00352D23 /* Views */,
-				01490D2E2A18888900645346 /* Model */,
+				01490D2E2A18888900645346 /* Models */,
 				018CFFB12A18370F000A8BFA /* TimesheetsCompanionApp.swift */,
 				018CFFB32A18370F000A8BFA /* ContentView.swift */,
 				018CFFB52A183711000A8BFA /* Assets.xcassets */,
 				018CFFBA2A183711000A8BFA /* TimesheetsCompanion.entitlements */,
-				01998F952A1A6FA000352D23 /* TSheetManager.swift */,
+				01B7A4532A1DA0BE00F64390 /* AppNavigation.swift */,
+				01B28BB52AC7A6FB00B5B0B7 /* SupabaseManager.swift */,
 			);
 			path = TimesheetsCompanion;
 			sourceTree = "<group>";
@@ -113,30 +151,18 @@
 		01998F8C2A193E2A00352D23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				014ECC782AC7CBFD00699BA7 /* TimeEntryViews */,
 				01998F8A2A193C0B00352D23 /* HomeView.swift */,
 				01998F8D2A193E3500352D23 /* ControlView.swift */,
 				01998F8F2A1949E300352D23 /* SubControlView.swift */,
-				01998F912A194BB400352D23 /* TimeSheetItem.swift */,
-				01998F9A2A1BC39800352D23 /* TimesheetDetail.swift */,
-				01998F9C2A1BC6BF00352D23 /* JobcodesListView.swift */,
+				01998F9C2A1BC6BF00352D23 /* ClientsListView.swift */,
 				01998FA02A1BCB2700352D23 /* WorkingReportView.swift */,
-				01998FA82A1BD13B00352D23 /* TimesheetsListView.swift */,
-				01B7A4552A1DAE1E00F64390 /* JobcodeItem.swift */,
+				01B7A4552A1DAE1E00F64390 /* ClientListItem.swift */,
 				019996152A2A7EB100077D06 /* LoginView.swift */,
+				0142B6142ACB6B43006C27D1 /* Card.swift */,
+				010AF87D2ACF6BCA00A8785A /* SignInWithAppleButtonViewRepresentable.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		01998F972A1AB0B300352D23 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				01998F982A1AB0C500352D23 /* HomeViewModel.swift */,
-				01998F9E2A1BC6CD00352D23 /* JobcodesListViewModel.swift */,
-				01998FA22A1BCB3D00352D23 /* WorkingReportViewModel.swift */,
-				01998FA62A1BCF1200352D23 /* TimesheetsListViewModel.swift */,
-				01B7A4532A1DA0BE00F64390 /* AppNavigation.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +182,8 @@
 			);
 			name = TimesheetsCompanion;
 			packageProductDependencies = (
+				01B28BB82AC7A75C00B5B0B7 /* Supabase */,
+				014ECC7D2ACB3E2A00699BA7 /* FluidMenuBarExtra */,
 			);
 			productName = TimesheetsCompanion;
 			productReference = 018CFFAE2A18370F000A8BFA /* TimesheetsCompanion.app */;
@@ -169,7 +197,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					018CFFAD2A18370F000A8BFA = {
 						CreatedOnToolsVersion = 14.3;
@@ -186,6 +214,8 @@
 			);
 			mainGroup = 018CFFA52A18370F000A8BFA;
 			packageReferences = (
+				01B28BB72AC7A75C00B5B0B7 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				014ECC7C2ACB3E2A00699BA7 /* XCRemoteSwiftPackageReference "fluid-menu-bar-extra" */,
 			);
 			productRefGroup = 018CFFAF2A18370F000A8BFA /* Products */;
 			projectDirPath = "";
@@ -212,27 +242,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01998FA32A1BCB3D00352D23 /* WorkingReportViewModel.swift in Sources */,
+				0142B6172ACB86A7006C27D1 /* BusinessModel.swift in Sources */,
 				01998F902A1949E300352D23 /* SubControlView.swift in Sources */,
-				01998F992A1AB0C500352D23 /* HomeViewModel.swift in Sources */,
-				01490D302A1888D400645346 /* TimesheetModel.swift in Sources */,
+				014ECC772AC7C4FA00699BA7 /* ClientModel.swift in Sources */,
+				0142B61A2ACEFBCD006C27D1 /* DateBinding+Extension.swift in Sources */,
 				01998F8B2A193C0B00352D23 /* HomeView.swift in Sources */,
-				01998FA72A1BCF1200352D23 /* TimesheetsListViewModel.swift in Sources */,
-				01B7A4562A1DAE1E00F64390 /* JobcodeItem.swift in Sources */,
+				010AF87E2ACF6BCA00A8785A /* SignInWithAppleButtonViewRepresentable.swift in Sources */,
+				01B7A4562A1DAE1E00F64390 /* ClientListItem.swift in Sources */,
 				01B7A4542A1DA0BE00F64390 /* AppNavigation.swift in Sources */,
-				01998FA92A1BD13B00352D23 /* TimesheetsListView.swift in Sources */,
+				01998FA92A1BD13B00352D23 /* TimeEntriesListView.swift in Sources */,
 				018CFFB42A18370F000A8BFA /* ContentView.swift in Sources */,
-				01998F922A194BB400352D23 /* TimeSheetItem.swift in Sources */,
+				01998F922A194BB400352D23 /* TimeEntryItem.swift in Sources */,
 				01998FA52A1BCB8300352D23 /* UserModel.swift in Sources */,
-				01998F9D2A1BC6BF00352D23 /* JobcodesListView.swift in Sources */,
+				01998F9D2A1BC6BF00352D23 /* ClientsListView.swift in Sources */,
 				01998F9B2A1BC39800352D23 /* TimesheetDetail.swift in Sources */,
-				01998F9F2A1BC6CD00352D23 /* JobcodesListViewModel.swift in Sources */,
 				019996162A2A7EB100077D06 /* LoginView.swift in Sources */,
-				01998F962A1A6FA000352D23 /* TSheetManager.swift in Sources */,
+				0142B6152ACB6B43006C27D1 /* Card.swift in Sources */,
 				01998FA12A1BCB2700352D23 /* WorkingReportView.swift in Sources */,
-				01998F942A1A6E2800352D23 /* JobcodeModel.swift in Sources */,
+				01B28BB62AC7A6FB00B5B0B7 /* SupabaseManager.swift in Sources */,
 				01998F8E2A193E3500352D23 /* ControlView.swift in Sources */,
+				014ECC7B2ACB03EE00699BA7 /* ElapsedTimeFormatter.swift in Sources */,
+				014ECC742AC7B65600699BA7 /* TimeEntryModel.swift in Sources */,
 				018CFFB22A18370F000A8BFA /* TimesheetsCompanionApp.swift in Sources */,
+				010AF87C2ACF487200A8785A /* ProjectModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -272,9 +305,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -289,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -303,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -332,9 +368,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -343,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -361,6 +399,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PK8WVYF36Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -371,6 +410,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasblack.TimesheetsCompanion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,6 +428,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = PK8WVYF36Y;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -398,6 +439,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicholasblack.TimesheetsCompanion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,6 +470,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		014ECC7C2ACB3E2A00699BA7 /* XCRemoteSwiftPackageReference "fluid-menu-bar-extra" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lfroms/fluid-menu-bar-extra.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+		01B28BB72AC7A75C00B5B0B7 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		014ECC7D2ACB3E2A00699BA7 /* FluidMenuBarExtra */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 014ECC7C2ACB3E2A00699BA7 /* XCRemoteSwiftPackageReference "fluid-menu-bar-extra" */;
+			productName = FluidMenuBarExtra;
+		};
+		01B28BB82AC7A75C00B5B0B7 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01B28BB72AC7A75C00B5B0B7 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 018CFFA62A18370F000A8BFA /* Project object */;
 }

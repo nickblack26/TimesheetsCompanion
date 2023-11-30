@@ -12,6 +12,14 @@ struct ControlView: View {
     let icon: String
     let title: String
     let subTitle: String?
+	var lineLimit: Int = 1
+	
+	init(icon: String, title: String, subTitle: String?, lineLimit: Int = 1) {
+		self.icon = icon
+		self.title = title
+		self.subTitle = subTitle
+		self.lineLimit = lineLimit
+	}
     
     var body: some View {
         ZStack(alignment: .trailing) {
@@ -28,7 +36,7 @@ struct ControlView: View {
                     if subTitle != nil {
                         Text(subTitle!)
                             .font(.caption2)
-                            .lineLimit(1)
+                            .lineLimit(lineLimit)
                             .foregroundColor(.primary)
                             .opacity(0.7)
                     }
